@@ -39,7 +39,11 @@ class Controller
         {
             Controller controller_obj = *((Controller*)parameters);
             //CHECK IF TASK3 IS ACTIVE. IF IT IS ACTIVE, ALWAYS DELETE IT WHEN TASK1 IS STARTED
-
+            printf("checking secondary task handle \n");
+            if(this->secondary_task_handle != NULL){
+                printf("task3 is active, delete it");
+                vTaskDelete(this->secondary_task_handle);
+            }
             for(;;)
             {     
                 printf("hello from task 1\n");

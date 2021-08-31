@@ -31,11 +31,7 @@ void Controller::State_change_handle(e_thermostat_state state)
         if (this ->main_task_handle != NULL){
             vTaskDelete(this ->main_task_handle);
         }
-        printf("checking secondary task handle \n");
-        if(this->secondary_task_handle != NULL){
-                printf("task3 is active, delete it");
-                vTaskDelete(this->secondary_task_handle);
-            }
+
     }
     else{
         printf("same task \n"); // the same task is set, dont do anything
