@@ -16,3 +16,4 @@ idf_component_register(SRCS "your_component.c"
                     INCLUDE_DIRS ".")
 ```
 
+"# esp32_rtos_test" 
